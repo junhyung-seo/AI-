@@ -1,7 +1,8 @@
 import streamlit as st
 from openai import OpenAI
 
-client = OpenAI(api_key="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")
+import os
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 st.title("🏗️ 친환경 건축 아이디어 생성기")
 
